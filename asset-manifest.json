@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/testShopDeploy/static/css/main.ab834191.css",
+    "main.js": "/testShopDeploy/static/js/main.150f2627.js",
+    "static/media/logo.svg": "/testShopDeploy/static/media/logo.814cc76545c71e00fd37c9428bf93982.svg",
+    "index.html": "/testShopDeploy/index.html",
+    "main.ab834191.css.map": "/testShopDeploy/static/css/main.ab834191.css.map",
+    "main.150f2627.js.map": "/testShopDeploy/static/js/main.150f2627.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab834191.css",
+    "static/js/main.150f2627.js"
+  ]
+}
