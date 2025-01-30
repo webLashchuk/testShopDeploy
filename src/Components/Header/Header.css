@@ -1,0 +1,31 @@
+.Header {
+    /* position: fixed; */
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #221f1f;
+    transition-property: transform, padding;
+    transition-duration: 0.15s;
+}
+
+.Inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.Nav {
+    display: flex;
+    gap: 20px;
+}
+
+.Logo {
+    display: block;
+    width: 100%;
+    max-width: 50px;
+}

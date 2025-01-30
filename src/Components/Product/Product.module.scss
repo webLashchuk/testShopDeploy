@@ -1,0 +1,17 @@
+.Product {
+    padding-top: 200px;
+    display: flex;
+    gap: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1;
+}
+
+img {
+    flex: 1;
+}
