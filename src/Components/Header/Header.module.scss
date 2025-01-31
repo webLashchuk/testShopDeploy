@@ -10,23 +10,26 @@
     background-color: #221f1f;
     transition-property: transform, padding;
     transition-duration: 0.15s;
-
-    &-list {
-            display: flex;
-            gap: 20px;
-        }
-
-    &-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-    }
 }
 
+.list {
+    display: flex;
+    gap: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
 
 .logo {
     display: block;
     width: 100%;
     max-width: 50px;
+}
+
+.link {
+    cursor: pointer;
 }

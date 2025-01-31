@@ -1,6 +1,6 @@
 import './App.scss';
 import Header from './Components/Header/Header';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from "react";
 import BestSellers from './Components/BestSellers/BestSellers';
 import Product from './Components/Product/Product';
@@ -12,31 +12,19 @@ function App() {
   const addToCart = (product) => {
     setProductsInCart((prev) => [...prev, product]); 
   };
-  
-  const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <BestSellers addToCart={addToCart} /> 
-    },
-    {
-        path: "/product/:productId",
-        element: <Product addToCart={addToCart} />
-    },
-    {
-        path: "/cart",
-        element: <Cart productsInCart={productsInCart} />
-    }
-  ],
-  {
-    basename: "/testShopDeploy",
-  });
 
   return (
-    <div className="App">
-      <RouterProvider router={router}>
+    <BrowserRouter basename="/testShopDeploy">
+      <div className="App">
         <Header />
-      </RouterProvider>
-    </div>
+        
+        <Routes>
+          <Route path="/" element={<BestSellers addToCart={addToCart} />} />
+          <Route path="/product/:productId" element={<Product addToCart={addToCart} />} />
+          <Route path="/cart" element={<Cart productsInCart={productsInCart} />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
