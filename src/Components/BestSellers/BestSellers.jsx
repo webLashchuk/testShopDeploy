@@ -14,15 +14,21 @@ const BestSellers = ({ addToCart }) => {
     }, []);
 
     return (
-        <div className={s.BestSellers}>
-            {products.map((product) => (
-                <BestSellersItem 
-                    product={product} 
-                    key={product.id} 
-                    addToCart={addToCart} 
-                />
-            ))}
-        </div>
+        <section className={s.bestsellers}>
+            <div className="layout">
+                <h1>Our Bestsellers</h1>
+
+                <ul className={s.products}>
+                    {products.map((product) => (
+                        <BestSellersItem 
+                            product={product} 
+                            key={product.id} 
+                            addToCart={addToCart} 
+                        />
+                    ))}
+                </ul>
+            </div>
+        </section>        
     );
 }
 
