@@ -1,5 +1,5 @@
 const Cart = ({ productsInCart }) => {
-    console.log(productsInCart);
+    console.log("Cart items:", productsInCart); 
 
     return (
         <div className="layout">

@@ -26,12 +26,16 @@ function App() {
         path: "/cart",
         element: <Cart productsInCart={productsInCart} />
     }
-  ]);
+  ],
+  {
+    basename: "/testShopDeploy",
+  });
 
   return (
     <div className="App">
-      <Header />
-      <RouterProvider router={router} />
+      <RouterProvider router={router}>
+        <Header />
+      </RouterProvider>
     </div>
   );
 }
