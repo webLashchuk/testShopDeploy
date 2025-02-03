@@ -1,6 +1,6 @@
-import logo from '../../assets/img/logo.svg'
-import s from './Header.module.scss'
-import { NavLink } from 'react-router-dom'
+import logo from '../../assets/img/logo.svg';
+import s from './Header.module.scss';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -19,7 +19,7 @@ const Header = () => {
                             <NavLink className={s.link} to="/cart">Cart</NavLink>
                         </li>
                         <li>
-                            <NavLink className={s.link} to="/favorites">Favorites</NavLink>
+                            <NavLink className={s.link} to="/wishlist">Favorites</NavLink>
                         </li>
                     </ul>
                 </nav>

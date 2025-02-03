@@ -1,0 +1,58 @@
+$border-radius: 3px;
+$color--primary: #f3f3f3;
+$modifier--text-color: #888;
+
+
+.quantity {
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:focus {
+        background: red;
+    }
+}
+
+.button,
+.screen {
+    user-select: none;
+    outline: none;
+}
+
+.button {
+    position: relative;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color:#3e77aa;
+    background-color: transparent;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(#fff, .6);
+    cursor: pointer;
+
+    &_Decrement {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+    
+    &_Increment {
+        border-radius: 0 $border-radius $border-radius 0;
+    }
+}
+
+.screen {
+    width: 60px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    fill: #3e77aa;
+}

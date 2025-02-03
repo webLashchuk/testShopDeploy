@@ -1,11 +1,10 @@
-import style from './BestSellersItem.module.scss';
-import { useState, useEffect } from 'react';
+import style from '../../BestSellers/BestSellersItem/BestSellersItem.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import WishListButton from '../../utils/WishListButton/WishListButton';
 
-const BestSellersItem = ({ product, addToCart, addToWishList, productsInWishList }) => {
+const WishListItem = ({ product, addToCart, addToWishList, productsInWishList }) => {
     let navigate = useNavigate();
-
     const [isInWishList, setIsInWishLIst] = useState(false);
 
     useEffect(() => {
@@ -36,7 +35,7 @@ const BestSellersItem = ({ product, addToCart, addToWishList, productsInWishList
                     <h2 className={style.title}>{product.title}</h2>
                     <p className={style.price}>{product.price} $</p>
                 </div>
-
+                
                 <div className={style.buttons}>
                     <button className={style.button} onClick={onClickHandler}>Show more...</button>
                     <button className={style.button} onClick={addToCartHandler}>Add to Cart</button>
@@ -46,4 +45,4 @@ const BestSellersItem = ({ product, addToCart, addToWishList, productsInWishList
     );
 };
 
-export default BestSellersItem;
+export default WishListItem;

@@ -3,7 +3,7 @@ import axios from "axios";
 import BestSellersItem from "./BestSellersItem/BestSellersItem";
 import s from "../BestSellers/BestSellers.module.scss";
 
-const BestSellers = ({ addToCart }) => { 
+const BestSellers = ({ addToCart, addToWishList, productsInWishList }) => { 
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -14,7 +14,7 @@ const BestSellers = ({ addToCart }) => {
     }, []);
 
     return (
-        <section className={s.bestsellers}>
+        <section className="section">
             <div className="layout">
                 <h1>Our Bestsellers</h1>
 
@@ -24,6 +24,8 @@ const BestSellers = ({ addToCart }) => {
                             product={product} 
                             key={product.id} 
                             addToCart={addToCart} 
+                            addToWishList={addToWishList}
+                            productsInWishList={productsInWishList}
                         />
                     ))}
                 </ul>

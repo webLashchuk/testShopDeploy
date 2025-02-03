@@ -1,5 +1,5 @@
 .Product {
-    padding-top: 200px;
+    padding-block: 100px;
     display: flex;
     gap: 50px;
 }
@@ -9,9 +9,19 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
-    flex: 1;
+    flex: 0 0 1 1;
 }
 
-img {
-    flex: 1;
+.image {
+    max-width: 800px;
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    flex: 0 0 1 1;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
